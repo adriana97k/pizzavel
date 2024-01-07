@@ -25,6 +25,8 @@
                 <!-- Core theme CSS (includes Bootstrap)-->
                 <link href="css/styles.css" rel="stylesheet" />
 
+                @yield('additional_head')
+
 </head>
 <body>
     <div id="app">
@@ -69,6 +71,8 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{{ route('locations') }}">Locations</a></li>
                         @guest
                         @if(request()->routeIs('login') === false)
                             <li><a href="{{ route('login') }}">Login</a></li>

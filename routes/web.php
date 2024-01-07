@@ -31,4 +31,6 @@ Route::middleware('admin')->group(function () {
     });
 });
 
+Route::get('/locations', 'LocationsController@index')->name('locations');
+
 Route::redirect('/admin', '/admin/orders');
