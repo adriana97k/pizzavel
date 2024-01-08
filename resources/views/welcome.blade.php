@@ -142,9 +142,9 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Looking for a job? Let's get in touch!</h2>
+                        <h2 class="white">Looking for a job? Let's get in touch!</h2>
                         <hr class="divider" />
-                        <p class="text-muted mb-5">Do you want to be a part of Pizzavel team? Send us a messages and we will get back to you as soon as possible!</p>
+                        <p class="white">Do you want to be a part of Pizzavel team? Send us a messages and we will get back to you as soon as possible!</p>
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
@@ -206,8 +206,8 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
+                        <i class="bi-phone white"></i>
+                        <div class="white">+1 (555) 123-4567</div>
                     </div>
                 </div>
             </div>

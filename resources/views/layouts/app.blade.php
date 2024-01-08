@@ -27,6 +27,17 @@
 
                 @yield('additional_head')
 
+                <style>
+        body {
+            background: url('https://c0.wallpaperflare.com/preview/839/412/980/food-and-drink-pizza-pizzas-tomato.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .white {
+            color: white;
+        }
+    </style>
+
 </head>
 <body>
     <div id="app">

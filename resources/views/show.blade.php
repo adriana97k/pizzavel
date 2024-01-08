@@ -11,6 +11,8 @@
                 <strong>Status:</strong> {{ $order->status->name }} <br>
                 </div>
 
+                <div><img src="https://cdn.dribbble.com/users/3048287/screenshots/12097596/media/d036835a48923154f98b59379dd7c96f.gif"></div>
+
                 <div class="panel-body">
                     @if (session('message'))
                         <div class="alert alert-success">

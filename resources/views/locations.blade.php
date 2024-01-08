@@ -29,6 +29,20 @@
             infoWindow.open(map, marker);
         }
     </script>
+
+<style>
+        body {
+            background: url('https://c0.wallpaperflare.com/preview/839/412/980/food-and-drink-pizza-pizzas-tomato.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* #map {
+            height: 400px;
+            background: url('public/assets/img/bg-masthead.jpg') no-repeat center center fixed;
+            background-size: cover;
+        } */
+    </style>
+
 @endsection
 
 @section('content')\
