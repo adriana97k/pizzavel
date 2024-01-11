@@ -69,7 +69,22 @@
                                 </div> <!-- /controls -->
                             </div> <!-- /form-group -->
 
+                            <div class="form-group">
+                                <label for="deliveryman_id" class="control-label col-lg-3">Deliveryman</label>
+                                <div class="controls col-lg-8">
 
+                                    <select name="deliveryman_id" id="deliveryman_id" class="dropdown-style input-field input-normal">
+                                        @foreach ($deliverymen as $deliveryman)
+                                            <option value="{{ $deliveryman->id}}" {{ (old("deliveryman", $currentDeliveryman) == $deliveryman->id ? "selected":"") }}>{{ $deliveryman->name }}</option>
+                                        @endforeach
+                                    </select>
+
+                                </div> <!-- /controls -->
+                            </div> <!-- /form-group -->
+
+                                <div class="form-group"><label class="control-label col-lg-3">Estimation</label>
+                                    <div class="controls col-lg-8"><input type="text" name="estimation" placeholder="Delivery estimation time" class="form-control"></div>
+                                </div>
 
                             <div class="form-group">
                                 <div class="col-lg-3"></div>

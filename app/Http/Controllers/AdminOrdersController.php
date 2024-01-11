@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\Status;
+use App\Deliveryman;
 use Illuminate\Http\Request;
 use App\Events\OrderStatusChanged;
 
@@ -16,7 +17,7 @@ class AdminOrdersController extends Controller
      */
     public function index()
     {
-        $orders = Order::with(['customer', 'status'])->get();
+        $orders = Order::with(['customer', 'status', 'deliveryman'])->get();
 
         return view('admin.index', compact('orders'));
     }
@@ -43,7 +44,10 @@ class AdminOrdersController extends Controller
         $statuses = Status::all();
         $currentStatus = $order->status_id;
 
-        return view('admin.edit', compact('order', 'statuses', 'currentStatus'));
+        $deliverymen = Deliveryman::all();
+        $currentDeliveryman = $order->deliveryman_id;
+
+        return view('admin.edit', compact('order', 'statuses', 'currentStatus', 'deliverymen', 'currentDeliveryman'));
     }
 
     /**
@@ -57,9 +61,12 @@ class AdminOrdersController extends Controller
     {
         $request->validate([
             'status_id' => 'required|numeric',
+            'deliveryman_id' => 'required|numeric',
         ]);
 
         $order->status_id = $request->status_id;
+        $order->deliveryman_id = $request->deliveryman_id;
+        $order->estimation = $request->estimation;
         $order->save();
 
         event(new OrderStatusChanged($order));

@@ -11,7 +11,7 @@ class Order extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'address', 'size', 'toppings', 'instructions', 'status_id'];
+    protected $fillable = ['user_id', 'address', 'size', 'toppings', 'instructions', 'status_id', 'deliveryman_id', 'estimation'];
 
     /**
      * Get the customer that placed the order.
@@ -27,5 +27,13 @@ class Order extends Model
     public function status()
     {
         return $this->belongsTo('App\Status');
+    }
+
+     /**
+     * Get the deliveryman of the order.
+     */
+    public function deliveryman()
+    {
+        return $this->belongsTo('App\Deliveryman');
     }
 }
